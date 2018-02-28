@@ -1,13 +1,13 @@
 # Site settings
-title: Jekyll Doc Theme
-email: your-email@domain.com
+title: Scribery
+email: sabbakaz@gmail.com
 description: >
-  Jekyll Template for Project Websites
-  providing documentation and blog post pages.
+  The Scribery project is an effort to design and implement an Open-Source
+  solution for recording user sessions on Linux systems.
 
 baseurl: "/jekyll-doc-theme" # the subpath of your site, e.g. /blog/
 url: https://aksakalli.github.io/jekyll-doc-theme # the base hostname & protocol for your site
-git_address: https://github.com/aksakalli/jekyll-doc-theme
+git_address: https://github.com/Scribery
 git_edit_address: https://github.com/aksakalli/jekyll-doc-theme/blob/gh-pages
 
 # theme options from https://bootswatch.com/
@@ -29,7 +29,7 @@ exclude:
   - .idea/
   - .gitignore
   - README.md
-timezone: Europe/Berlin
+timezone: Europe/Prague
 defaults:
 - scope:
     path: _posts

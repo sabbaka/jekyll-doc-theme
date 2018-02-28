@@ -4,10 +4,9 @@ layout: default
 
 <div class="header-container jumbotron">
     <div class="container">
-        <h1>Jekyll Template for Project Websites</h1>
-        <p>Simple and modern design for publishing blog posts, documentation and many more things for your project.
-          You can now clone and start to create a website for your project like this one.</p>
-        <p><a class="btn btn-primary btn-lg" href="{{ "/docs/home/" | prepend: site.baseurl }}" role="button">Learn more</a></p>
+        <h1>Scribery</h1>
+        <p>Open-Source Terminal Session Recording</p>
+        <!--<p><a class="btn btn-primary btn-lg" href="{{ "/docs/home/" | prepend: site.baseurl }}" role="button">Learn more</a></p>-->
     </div>
 </div>
 
@@ -15,48 +14,215 @@ layout: default
 <div class="container">
 
     <div class="row">
-        <div class="col-md-6">
-            <h2 class="header-light regular-pad">What is Jekyll?</h2>
+        <div class="col-md-8">
+            <!--<h2 class="header-light regular-pad">What is Jekyll?</h2>-->
+            <!--<blockquote>-->
+              <!--<p>Jekyll is a simple, blog-aware, static site generator. It takes a template-->
+              <!--directory containing raw text files in various formats, runs it through-->
+              <!--a converter (like <a href="https://daringfireball.net/projects/markdown/">Markdown</a>)-->
+              <!--and our <a href="https://github.com/Shopify/liquid/wiki">Liquid</a> renderer, and-->
+              <!--spits out a complete, ready-to-publish static website suitable-->
+              <!--for serving with your favorite web server. Jekyll also happens to be the engine-->
+              <!--behind <a href="https://pages.github.com">GitHub Pages</a>, which means you can use Jekyll-->
+              <!--to host your project’s page, blog, or website from GitHub’s servers <strong>for-->
+              <!--free</strong>.</p>-->
+            <!--</blockquote>-->
             <blockquote>
-              <p>Jekyll is a simple, blog-aware, static site generator. It takes a template
-              directory containing raw text files in various formats, runs it through
-              a converter (like <a href="https://daringfireball.net/projects/markdown/">Markdown</a>)
-              and our <a href="https://github.com/Shopify/liquid/wiki">Liquid</a> renderer, and
-              spits out a complete, ready-to-publish static website suitable
-              for serving with your favorite web server. Jekyll also happens to be the engine
-              behind <a href="https://pages.github.com">GitHub Pages</a>, which means you can use Jekyll
-              to host your project’s page, blog, or website from GitHub’s servers <strong>for
-              free</strong>.</p>
+                <p>The Scribery project is an effort to design and implement an Open-Source
+                    solution for recording user sessions on Linux systems.</p>
+
+                <p>We're working on supporting recording of text terminal sessions (e.g. login at
+                    the console, via SSH, or telnet). The recorded data includes what user enters
+                    into the terminal and sees on the screen, what commands the user executes,
+                    what files he/she accesses and how, and other data relevant to the session.</p>
             </blockquote>
         </div>
-        <div class="col-md-6 text-center">
-            <img src="img/jekyll-dark.png" alt="" class="img-responsive">
+        <div class="col-md-4">
+            <p>
+                Most important part of project is tlog - software built to record terminal's sessions.
+            </p>
+            <p><a class="btn btn-primary btn-sm" href="https://github.com/Scribery/tlog/releases" role="button">Download tlog latest release</a></p>
+            <p>
+                You can see live demo of recorded terminal session playback in browser.
+                It's pure JavaScript and session is stored in JSON.
+            </p>
+            <p><a class="btn btn-primary btn-sm" href="#" role="button">JS-player Demo</a></p>
         </div>
+        <!--<div class="col-md-6 text-center">-->
+            <!--<img src="img/jekyll-dark.png" alt="" class="img-responsive">-->
+        <!--</div>-->
     </div>
 
     <hr>
 
     <div class="row">
-        <div class="col-sm-4">
-            <h1 class="text-center"><i class="fa fa-pencil" aria-hidden="true"></i></h1>
-            <h3 class="text-center">Easy to install and publish</h3>
-            <p>Get started by cloning source into GitHub account of your project. Thanks to <a href="https://pages.github.com">GitHub Pages</a>,
-              it will be automatically compiled and published under your project's subdomain on `github.io`.
-            </p>
-        </div>
-        <div class="col-sm-4">
-            <h1 class="text-center"><i class="fa fa-cogs" aria-hidden="true"></i></h1>
-            <h3 class="text-center">Modular Styling and Templating</h3>
-            <p>This template uses <a href="https://github.com/twbs/bootstrap-sass">bootstrap-sass</a> along with <a href="https://bootswatch.com/">Bootwatch themes</a>.
-            You can change the theme or write your custom by overwriting bootstrap sass variables for a different color set, font options, etc.</p>
-        </div>
-        <div class="col-sm-4">
-            <h1 class="text-center"><i class="fa fa-code-fork" aria-hidden="true"></i></h1>
-            <h3 class="text-center">Git-based source control</h3>
-            <p>Leverage from Git version control system by
-              maintaining your documentation along with the source code; publish the page when you merge to the master branch.</p>
+        <div class="col-md-12">
+            <p>Many companies need to have their systems used, or even managed by people they
+                don’t entirely trust: contractors, outsourced support, peripheral IT staff,
+                etc. It helps to know what these users or operators were doing on your
+                systems, or even what they’re doing right now, so you can not only prevent
+                repeated issues, but also stop an incident about to happen.</p>
+
+            <p>Government, medical and certain other organizations can be required by law to
+                collect recordings of user sessions. Financial organizations require tight
+                tracking of what's happening on their systems. Support desks also appreciate a
+                way to look back at what exactly led to an issue, so they don’t need to talk
+                through a user’s recollection of events.</p>
+
+
+
+            <p>To support centralized architecture and to take the recording away from the
+                user system where it cannot be kept safely, we stream it via the conventional
+                logging system to a central storage. Then, the auditors, or support, can
+                search, correlate, and playback the recordings from that central location.</p>
+
+            <p>The solution is being integrated with a central identity and policy management
+                system, so that administrators could specify which users to record where
+                centrally.</p>
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Components</h2>
+        </div>
+        <div class="col-md-12">
+            <h3>Client Side</h3>
+        </div>
+        <div class="col-sm-3">
+            <!--<h1 class="text-center"><i class="fa fa-pencil" aria-hidden="true"></i></h1>-->
+            <h3><strong><a href="https://scribery.github.io/tlog/">Tlog-rec</a></strong></h3>
+            <p>A terminal I/O recording shim, which is put between the terminal and the
+                user shell. Sends the recording to the logging server as JSON. A part of
+                <a href="https://scribery.github.io/tlog/">tlog</a>.</p>
+        </div>
+        <div class="col-sm-2">
+            <!--<h1 class="text-center"><i class="fa fa-cogs" aria-hidden="true"></i></h1>-->
+            <!--<h3 class="text-center">Modular Styling and Templating</h3>-->
+            <h3><strong><a href="https://fedorahosted.org/sssd/">SSSD</a></strong></h3>
+            <p>A system daemon responsible for telling the system when and how to start
+                session recording, possibly on behalf of a central identity and policy
+                management system. Optional.</p>
+        </div>
+        <div class="col-sm-2">
+            <!--<h1 class="text-center"><i class="fa fa-code-fork" aria-hidden="true"></i></h1>-->
+            <!--<h3 class="text-center">Git-based source control</h3>-->
+            <h3><strong><a href="https://people.redhat.com/sgrubb/audit/">Auditd</a></strong></h3>
+            <p>A general auditing system, which records additional session activity such as
+                commands executed and files accessed. Optional.</p>
+        </div>
+        <div class="col-sm-2">
+            <h3><strong><a href="https://scribery.github.io/aushape/">Aushape</a></strong></h3>
+            <p>An audit log converter running under Auditd to convert audit events to JSON
+                on the fly, to be passed to the logging server. Optional.</p>
+        </div>
+        <div class="col-sm-3">
+            <h3><strong>Logging Server</strong></h3>
+            <p>
+                <a href="https://www.rsyslog.com/">Rsyslog</a>,
+                <a href="https://www.fluentd.org/">Fluentd</a>, or
+                <a href="https://www.elastic.co/products/logstash">Logstash</a>
+                - a logging server, which collects both the recorded terminal I/O, and audit
+                messages, then massages and sends them to the central storage.</p>
+        </div>
+        <div class="col-md-12">
+            <h3>Server Side</h3>
+        </div>
+        <div class="col-sm-3">
+            <h3><strong><a href="https://www.freeipa.org/">FreeIPA</a></strong></h3>
+            <p>A central identity and policy management solution responsible for
+                controlling what is going to be recorded, for which users/groups, and on
+                which hosts. Optional.</p>
+        </div>
+        <div class="col-sm-3">
+            <h3><strong><a href="https://www.elastic.co/products/elasticsearch">Elasticsearch</a></strong></h3>
+            <p>The central storage for the recordings. Can also serve as the storage of
+                logs in general. Can be used for searching and correlation with the help of
+                visualization solutions such as <a href="https://www.elastic.co/products/kibana">Kibana</a>.</p>
+        </div>
+        <div class="col-sm-3">
+            <h3><strong><a href="https://scribery.github.io/tlog/">Tlog-play</a></strong></h3>
+            <p>A basic command-line session playback tool. Can be used to test the setup
+                and quickly playback sessions from the command line. A part of <a href="https://scribery.github.io/tlog/">tlog</a>.
+                Optional.</p>
+        </div>
+        <div class="col-sm-3">
+            <h3><strong><a href="https://github.com/Scribery/cockpit">Web UI</a></strong></h3>
+            <p>A session playback web UI component, which can join the terminal I/O and
+                audit data for searching and correlation within specific sessions.
+                Currently is based on Cockpit.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h2>
+                <a id="control-and-data-flow" class="anchor" href="#control-and-data-flow" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Control and data flow</h2>
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <pre><code>       Servers            Network               Clients
+ _____________________               _______________________________
+|  _________________  |             |  ___________________          |
+| |                 | |             | |                   |         |
+| |     FreeIPA     |====(control)===&gt;|       SSSD        |         |
+| |_________________| |             | |___________________|         |
+|         /\          |             |     ||          /\            |
+|         ||          |             |     ||          ||            |
+|      (control)      |             |  (control)   (control)        |
+|   ......||.......   |             |     ||  ........||.........   |
+|  : Administrator :  |             |     || :   Administrator   :  |
+|   '''''''''''''''   |             |     ||  '''||'''''''''||'''   |
+|                     |             |     ||  (control)  (control)  |
+|   ...............   |             |     ||     ||         ||      |
+|  :    Auditor    :  |             |  ___\/_____\/__   ____\/____  |
+|   ''/\'''''''/\''   |             | |              | |          | |
+|     ||       ||     |             | |   Tlog-rec   | |  Auditd  | |
+|   (data)   (data)   |             | |______________| |__________| |
+|  ___||__   __||___  |             |        ||             ||      |
+| |       | |       | |             |        ||          ___\/____  |
+| | Tlog- | | WebUI | |             |        ||         |         | |
+| | play  | | (TBD) | |             |        ||         | Aushape | |
+| |_______| |_______| |             |        ||         |_________| |
+|     /\       /\     |             |        ||             ||      |
+|     ||       ||     |             |      (data)         (data)    |
+|   (data)   (data)   |             |        ||             ||      |
+|  ___||_______||___  |             |     ___\/_____________\/___   |
+| |                 | |             |    |                       |  |
+| |                 | |             |    |        Rsyslog        |  |
+| |                 | |             |    | - - - - - - - - - - - |  |
+| |  Elasticsearch  |&lt;====(data)=========|        Fluentd        |  |
+| |                 | |             |    | - - - - - - - - - - - |  |
+| |                 | |             |    |        Logstash       |  |
+| |_________________| |             |    |_______________________|  |
+|_____________________|             |_______________________________|
+            </code></pre>
+        </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-12">
+            <p>See also the project's <a href="http://www.freeipa.org/page/Session_Recording">WIP design page</a>
+                at <a href="http://www.freeipa.org/page/Main_Page">FreeIPA website</a>.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h2>
+                <a id="status-and-plans" class="anchor" href="#status-and-plans" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Status and plans</h2>
 
+            <p>At the moment the base terminal I/O recording and playback is implemented in
+                tlog, its <a href="https://github.com/Scribery/tlog/releases">packages</a> are
+                available on GitHub and in Fedora. We have basic functionality of converting
+                audit logs to JSON implemented in Aushape, which is available on GitHub.</p>
+
+            <p>Right now we're working on integrating tlog with SSSD and FreeIPA, and are
+                starting implementing the web UI playback component.</p>
+
+        </div>
+        <div class="col-md-12">
+            <a id="contacts" class="anchor" href="#contacts" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contacts</h2>
+
+            <p>Please contact <a href="mailto:spbnick@gmail.com">Nikolai Kondrashov</a> and <a href="mailto:sabbakaz@gmail.com">Kyrylo Gliebov</a> if you have any
+                questions or suggestions.</p>
+            </section>
+        </div>
+    </div>
 </div>
